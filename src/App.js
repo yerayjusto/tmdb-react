@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { getMovies } from './api/index';
+import NavBar from './components/Navbar/NavBar';
 import Movies from './components/Movies/Movies';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <Router>
+      <NavBar />
       <Routes>
         <Route exact path="/" element={<Movies movies={movies} />} />
       </Routes>
