@@ -18,3 +18,10 @@ export const getMovies = async () => {
     const data = await res.data;
     return data;
 }
+
+//Get api movie by id
+export const getMovieDetails = async (id) => {
+  const res = await app.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}`);
+  const data = await res.data;
+  return data;
+}
